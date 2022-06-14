@@ -1,0 +1,45 @@
+@use "../utils/box-shadow.scss";
+@use "../utils/variables.scss";
+@use "../utils/colors.scss";
+
+
+.function{
+    counter-reset: steps;
+    & ol{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        @media (max-width:1000px){
+            flex-direction: column;
+        }
+    }
+    & li{position: relative;
+        &::before{
+            content: counter(steps);
+            counter-increment: steps;
+            color: white;
+            background-color: colors.$purple;
+            width: 2*variables.$function-bullet-heigth;
+            height: 2*variables.$function-bullet-heigth;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            position: absolute;
+            bottom: variables.$function-bullet-heigth;
+            left: -1*variables.$function-bullet-heigth;
+        }
+        list-style: none;
+        background-color: #f6f6f6;
+        padding: 24px 32px;
+        flex-grow: 1;
+        border-radius: 15px;
+        
+        @include box-shadow.base-shadow;
+    }
+     & i.fas{
+        margin-right: 15px;
+        color: colors.$lightgrey;
+        font-size: 24px;
+    
+     }
+}
