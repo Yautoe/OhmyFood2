@@ -1,8 +1,33 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+}
+
+main {
+  padding: 0 112px;
+}
+@media (max-width: 1000px) {
+  main {
+    padding: 0 15px;
+  }
+}
+
+h2 {
+  padding: 32px 0;
+  margin: 0;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 header {
@@ -31,7 +56,6 @@ header {
   text-align: center;
 }
 .explorer h2 {
-  margin-top: 2rem;
   font-size: 2rem;
 }
 .explorer p {
@@ -52,13 +76,14 @@ header {
 
 .function {
   counter-reset: steps;
+  margin-bottom: 32px;
 }
 .function ol {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
   .function ol {
     flex-direction: column;
   }
@@ -83,13 +108,77 @@ header {
   display: grid;
   place-items: center;
   position: absolute;
-  bottom: 15px;
   left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .function i.fas {
   margin-right: 15px;
   color: #7e7e7e;
   font-size: 24px;
+}
+
+.menus {
+  background-color: #f6f6f6;
+  margin-bottom: 32px;
+}
+.menus .menus_cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+@media (max-width: 1150px) {
+  .menus .menus_cards {
+    grid-template-columns: 1fr;
+  }
+}
+.menus .card__image {
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px 15px 0 0;
+}
+.menus .card__image-1 {
+  background-image: url("../assets/menu-1.jpg");
+}
+.menus .card__image-2 {
+  background-image: url("../assets/menu-2.jpg");
+}
+.menus .card__image-3 {
+  background-image: url("../assets/menu-3.jpg");
+}
+.menus .card__image-4 {
+  background-image: url("../assets/menu-4.jpg");
+}
+.menus .card__description {
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 15px 15px;
+}
+.menus .card__description h3,
+.menus .card__description p {
+  padding: 8px;
+}
+.menus .card__description i {
+  font-size: 32px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+footer {
+  background-color: #353535;
+  padding: 15px 32px;
+  color: white;
+}
+footer h2 {
+  font-family: "Shrikhand", "sans-sérif";
+  padding: 15px 0;
+  font-weight: 500;
+}
+footer p {
+  padding: 3px;
 }
 
 /*# sourceMappingURL=style.css.map */

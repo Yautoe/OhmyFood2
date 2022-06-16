@@ -1,15 +1,16 @@
-@use "../utils/box-shadow.scss";
+@use "../utils/mixins.scss";
 @use "../utils/variables.scss";
 @use "../utils/colors.scss";
 
 
 .function{
     counter-reset: steps;
+    margin-bottom: 32px;
     & ol{
         display: flex;
         flex-wrap: wrap;
         gap: 32px;
-        @media (max-width:1000px){
+        @media (max-width:1150px){
             flex-direction: column;
         }
     }
@@ -25,8 +26,10 @@
             display: grid;
             place-items: center;
             position: absolute;
-            bottom: variables.$function-bullet-heigth;
             left: -1*variables.$function-bullet-heigth;
+            top: 50%;
+            transform: translateY(-50%);
+            
         }
         list-style: none;
         background-color: #f6f6f6;
@@ -34,7 +37,7 @@
         flex-grow: 1;
         border-radius: 15px;
         
-        @include box-shadow.base-shadow;
+        @include mixins.base-shadow;
     }
      & i.fas{
         margin-right: 15px;

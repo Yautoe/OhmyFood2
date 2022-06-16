@@ -4,4 +4,24 @@ body {
     margin: 0;
     font-family: "Roboto", sans-serif;
   }
-  
+  main{
+    padding: 0 112px;
+    @media (max-width: 1000px){
+      padding: 0 15px;
+    }
+  }
+  h2{
+    padding: 32px 0;
+    margin: 0;
+  }
+
+  h3,
+  p { 
+    margin: 0;
+
+  }
+
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
