@@ -1,13 +1,15 @@
 @use "../utils/variables.scss";
+#homepage{
 
-.menus{
-    background-color: #f6f6f6;
-    margin-bottom: 32px;
     
-    
-    
-    .menus_cards{
-        display: grid;
+    .menus{
+        background-color: #f6f6f6;
+        margin-bottom: 32px;
+        
+        
+        
+        .menus_cards{
+            display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 32px;
         @media (max-width:variables.$breakpoint) {
@@ -16,28 +18,28 @@
         }
     }
     .card{
-
+        
         &__image{
             
             height: 240px;
             background-size: cover;
             background-position: center;
             border-radius: 15px 15px 0 0
-
+            
         }
         @for $i from 1 through 4 {
             &__image-#{$i} {
-              background-image: url("../assets/menu-#{$i}.jpg");
+                background-image: url("../assets/menu-#{$i}.jpg");
             }
-          }
-          &__description{
+        }
+        &__description{
             position:relative;
            background-color: white;
            border-radius: 0 0 15px 15px;
-
-            h3,
-            p{
-                padding: 8px;
+           
+           h3,
+           p{
+               padding: 8px;
             }
             i{
                 font-size: 32px;
@@ -46,7 +48,8 @@
                 top: 50%;
                 transform: translateY(-50%);
             }
-          }
-
+        }
+        
     }
+}
 }

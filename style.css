@@ -8,6 +8,7 @@ body {
 
 main {
   padding: 0 112px;
+  background-color: #f6f6f6;
 }
 @media (max-width: 1000px) {
   main {
@@ -118,48 +119,48 @@ header {
   font-size: 24px;
 }
 
-.menus {
+#homepage .menus {
   background-color: #f6f6f6;
   margin-bottom: 32px;
 }
-.menus .menus_cards {
+#homepage .menus .menus_cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
 }
 @media (max-width: 1150px) {
-  .menus .menus_cards {
+  #homepage .menus .menus_cards {
     grid-template-columns: 1fr;
   }
 }
-.menus .card__image {
+#homepage .menus .card__image {
   height: 240px;
   background-size: cover;
   background-position: center;
   border-radius: 15px 15px 0 0;
 }
-.menus .card__image-1 {
+#homepage .menus .card__image-1 {
   background-image: url("../assets/menu-1.jpg");
 }
-.menus .card__image-2 {
+#homepage .menus .card__image-2 {
   background-image: url("../assets/menu-2.jpg");
 }
-.menus .card__image-3 {
+#homepage .menus .card__image-3 {
   background-image: url("../assets/menu-3.jpg");
 }
-.menus .card__image-4 {
+#homepage .menus .card__image-4 {
   background-image: url("../assets/menu-4.jpg");
 }
-.menus .card__description {
+#homepage .menus .card__description {
   position: relative;
   background-color: white;
   border-radius: 0 0 15px 15px;
 }
-.menus .card__description h3,
-.menus .card__description p {
+#homepage .menus .card__description h3,
+#homepage .menus .card__description p {
   padding: 8px;
 }
-.menus .card__description i {
+#homepage .menus .card__description i {
   font-size: 32px;
   position: absolute;
   right: 15px;
@@ -179,6 +180,42 @@ footer h2 {
 }
 footer p {
   padding: 3px;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+#page-resto .banner img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  object-position: center;
+}
+#page-resto .resto__title {
+  margin-top: -32px;
+  border-radius: 32px 32px 0 0;
+  position: relative;
+}
+#page-resto .resto__title h2 {
+  font-family: "Shrikhand", "cursive";
+}
+#page-resto .resto-main {
+  padding: 0 15px;
+}
+#page-resto .menus {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+@media (max-width: 1150px) {
+  #page-resto .menus {
+    grid-template-columns: 1fr;
+  }
+}
+#page-resto .menus .menus__category {
+  border: 1px solid red;
+  background-color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
