@@ -37,7 +37,7 @@
         flex-grow: 1;
         border-radius: 15px;
         
-        @include mixins.base-shadow;
+        @include mixins.box-shadow;
     }
      & i.fas{
         margin-right: 15px;

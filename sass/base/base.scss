@@ -5,22 +5,19 @@ body {
     font-family: "Roboto", sans-serif;
   }
   main{
-    padding: 0 112px;
-    @media (max-width: 1000px){
-      padding: 0 15px;
-    }
     background-color: #f6f6f6;
   }
-  h2{
-    padding: 32px 0;
-    margin: 0;
-  }
-
+  h1,
+  h2,
   h3,
-  p { 
+  h4,
+  h5,
+  h6,
+  p{
+    padding: 0 0;
     margin: 0;
-
   }
+
 
   a{
     text-decoration: none;

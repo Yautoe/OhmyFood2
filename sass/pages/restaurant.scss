@@ -1,10 +1,10 @@
 @use "../utils/variables.scss";
 @use "../utils/colors.scss";
+@use "../utils/mixins.scss";
+@use "../utils/animations.scss";
 
-body{
-  background-color: colors.$lightergrey;
-}
-#page-resto{
+
+body#page-resto {
 
   .banner img {
     width: 100%;
@@ -12,31 +12,93 @@ body{
     object-fit: cover;
     object-position: center;
   }
-  
-  .resto__title {
+
+  .menus {
     margin-top: -32px;
-    border-radius: 32px 32px 0 0;
     position: relative;
-    h2 {
-      font-family: "Shrikhand", "cursive";
-
-    }
-  }
-  .resto-main{
-
-    padding: 0 15px;
-  }
-  .menus{
+    border-radius: 32px 32px 0 0;
+    background-color: colors.$lightergrey;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-
-    @media (max-width: variables.$breakpoint){
+    padding: 0 15px;
+    
+    @media (max-width: variables.$breakpoint) {
       grid-template-columns: 1fr;
     }
-    .menus__category{
-      border: 1px solid red;
+    h2 {
+      font-family: "Shrikhand", "cursive";
+      padding: 32px 15px;
+    }
+    h3 {
+      text-transform: uppercase;
+      font-weight: 300;
+      position: relative;
+      &::after {
+        content: "";
+        height: 4px;
+        width: 48px;
+        background-color: colors.$color-tertiary;
+        bottom: -5px;
+        left: 0;
+        position: absolute;
+      }
+    }
+    .menu-items {
+      display: flex;
+      border-radius: 15px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
       background-color: white;
+      margin: 8px;
+      @include mixins.box-shadow;
+      .menu-item__prix {
+        margin-left: auto;
+        font-weight: 900;
+        padding: 15px;
+        display: flex;
+        align-items: flex-end;
+      }
+      .menu-item__description {
+        padding: 15px;
+        overflow: hidden;
+        h4,
+        p {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+      .menu-item__check {
+        display: grid;
+        place-items: center;
+        $button-width: 64px;
+        background-color: colors.$color-tertiary;
+        margin-right: -$button-width;
+        width: $button-width;
+        border-radius: 0 15px 15px 0;
+        transition: margin-right 0.5s;
+        flex-shrink: 0;
+        i {
+          display: grid;
+          place-items: center;
+          background: white;
+          border-radius: 15px;
+          aspect-ratio: 1;
+          width: 32px;
+          color: colors.$color-tertiary;
+        }
+      }
+      &:hover {
+        .menu-item__check {
+          margin-right: 0;
+        }
+        i {
+          @include animations.quarterspin;
+          animation: quarterspin 0.5s ease-in-out;
+        }
+      }
     }
   }
 }
