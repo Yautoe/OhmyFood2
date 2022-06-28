@@ -67,7 +67,12 @@ header {
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transition: transform 200ms;
   margin-top: 1rem;
+  cursor: pointer;
   box-shadow: 2px 1px 8px -3px #7e7e7e;
+}
+.explorer button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 .function {
@@ -272,6 +277,9 @@ body#page-resto .menus .menu-items .menu-item__check i {
   width: 32px;
   color: #99e2d0;
 }
+body#page-resto .menus .menu-items:hover {
+  cursor: pointer;
+}
 body#page-resto .menus .menu-items:hover .menu-item__check {
   margin-right: 0;
 }
@@ -285,6 +293,28 @@ body#page-resto .menus .menu-items:hover i {
   100% {
     transform: rotate(0);
   }
+}
+body#page-resto .order {
+  height: 30vh;
+  display: grid;
+  place-items: center;
+}
+body#page-resto .order button {
+  color: white;
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  transition: transform 200ms;
+  margin-top: 1rem;
+  cursor: pointer;
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
+}
+body#page-resto .order button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=style.css.map */
