@@ -192,6 +192,9 @@ footer p {
     opacity: 1;
   }
 }
+body#page-resto header:hover::before {
+  transform: translateY(-50%) scale(1.2);
+}
 body#page-resto header::before {
   display: inline-block;
   position: absolute;
