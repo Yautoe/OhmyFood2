@@ -3,6 +3,9 @@
 @use "../utils/mixins.scss";
 @use "../utils/animations.scss";
 
+body{
+  background-color: colors.$lightergrey;
+}
 body#page-resto {
   header {
     &:hover::before {
