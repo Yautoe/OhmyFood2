@@ -258,6 +258,17 @@ body#page-resto .menus .menu-items {
   background-color: white;
   margin: 8px;
   box-shadow: 2px 1px 8px -3px #7e7e7e;
+  animation: appear 1s;
+  animation-fill-mode: both;
+}
+body#page-resto .menus .menu-items:nth-child(2) {
+  animation-delay: 200ms;
+}
+body#page-resto .menus .menu-items:nth-child(3) {
+  animation-delay: 300ms;
+}
+body#page-resto .menus .menu-items:nth-child(4) {
+  animation-delay: 400ms;
 }
 body#page-resto .menus .menu-items .menu-item__prix {
   margin-left: auto;

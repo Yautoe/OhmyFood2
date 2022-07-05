@@ -57,6 +57,11 @@ body#page-resto {
       }
     }
     .menu-items {
+      @for $i from 2 through 4 {
+        &:nth-child(#{$i}){
+          animation-delay: 100ms * $i;
+        }
+      }
       display: flex;
       border-radius: 15px;
       overflow: hidden;
@@ -65,6 +70,8 @@ body#page-resto {
       background-color: white;
       margin: 8px;
       @include mixins.box-shadow;
+      animation: appear 1s;
+      animation-fill-mode: both;
       .menu-item__prix {
         margin-left: auto;
         font-weight: 900;
