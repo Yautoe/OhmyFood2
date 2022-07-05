@@ -60,11 +60,6 @@ body#page-resto {
       }
     }
     .menu-items {
-      @for $i from 2 through 4 {
-        &:nth-child(#{$i}){
-          animation-delay: 100ms * $i;
-        }
-      }
       display: flex;
       border-radius: 15px;
       overflow: hidden;

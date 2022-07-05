@@ -13,8 +13,14 @@
         @media (max-width:1150px){
             flex-direction: column;
         }
-    }
+    
     & li{position: relative;
+        list-style: none;
+        background-color: #f6f6f6;
+        padding: 24px 32px;
+        flex-grow: 1;
+        border-radius: 15px;
+        @include mixins.box-shadow;
         &::before{
             content: counter(steps);
             counter-increment: steps;
@@ -31,12 +37,6 @@
             transform: translateY(-50%);
             
         }
-        list-style: none;
-        background-color: #f6f6f6;
-        padding: 24px 32px;
-        flex-grow: 1;
-        border-radius: 15px;
-        @include mixins.box-shadow;
         &:hover {
             @include mixins.transform-zoom;
             background-color: lighten(colors.$purple, 35%);
@@ -44,11 +44,13 @@
               color: colors.$purple;
             }
           }
-    }
+    
      & i.fas{
         margin-right: 15px;
         color: colors.$lightgrey;
         font-size: 24px;
     
      }
+    }
+    }
 }
