@@ -59,6 +59,8 @@ body#page-resto {
         position: absolute;
       }
     }
+  
+    
     .menu-items {
       display: flex;
       border-radius: 15px;
@@ -77,6 +79,7 @@ body#page-resto {
         display: flex;
         align-items: flex-end;
       }
+    
       .menu-item__description {
         padding: 15px;
         overflow: hidden;
