@@ -33,7 +33,6 @@
                 }
         }
         &__description{
-            @include mixins.heart-animated;
             position:relative;
             background-color: white;
             border-radius: 0 0 15px 15px;
@@ -48,6 +47,19 @@
                 right: 15px;
                 top: 50%;
                 transform: translateY(-50%);
+            }
+            .fas {
+                color: transparent;
+                -webkit-background-clip: text;
+                opacity: 0;
+                transition: all 200ms ease-in-out;
+                @include mixins.gradient;
+
+            }
+            &:hover .fas{
+                opacity: 1;
+                transform:translateY(-50%) scale(1.1);
+
             }
         }
         
