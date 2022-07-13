@@ -92,6 +92,46 @@ header {
   opacity: 0.9;
 }
 
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: white;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: disappear 200ms;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  transform-origin: top;
+}
+.loader::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #935dc9;
+  border-radius: 50%;
+  animation: spin 3s infinite ease-in-out;
+}
+
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .function {
   counter-reset: steps;
   margin-bottom: 32px;
@@ -157,6 +197,21 @@ header {
     grid-template-columns: 1fr;
   }
 }
+#homepage .menus .menus_cards .new {
+  position: relative;
+}
+#homepage .menus .menus_cards .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 32px;
+  width: 80px;
+  background-color: #99e2d0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  right: 15px;
+  top: 15px;
+}
 #homepage .menus .menus_cards .card__image {
   height: 240px;
   background-size: cover;
@@ -182,7 +237,7 @@ header {
 }
 #homepage .menus .menus_cards .card__description h3,
 #homepage .menus .menus_cards .card__description p {
-  padding: 8px;
+  padding: 5px 8px 5px;
 }
 #homepage .menus .menus_cards .card__description i {
   font-size: 32px;
@@ -273,6 +328,17 @@ body#page-resto .menus {
 body#page-resto .menus h2 {
   font-family: "Shrikhand", "cursive";
   padding: 32px 15px;
+}
+body#page-resto .menus h2 .fas {
+  color: transparent;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+body#page-resto .menus h2:hover .fas {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
 }
 body#page-resto .menus h3 {
   text-transform: uppercase;

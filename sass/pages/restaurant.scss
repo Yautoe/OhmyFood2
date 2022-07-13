@@ -41,10 +41,24 @@ body#page-resto {
     @media (max-width: variables.$breakpoint) {
       grid-template-columns: 1fr;
     }
+    
     h2 {
       font-family: "Shrikhand", "cursive";
       padding: 32px 15px;
+      .fas {
+        color: transparent;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 200ms ease-in-out;
+        @include mixins.gradient;
+
     }
+    &:hover .fas{
+        opacity: 1;
+        transform:translateY(-50%) scale(1.1);
+
+    }
+  }
     h3 {
       text-transform: uppercase;
       font-weight: 300;
